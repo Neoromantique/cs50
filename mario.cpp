@@ -1,7 +1,5 @@
 #include <iostream>
 
-
-
 main() {
 
 	int height;
