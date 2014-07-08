@@ -13,10 +13,10 @@ int main() {
 
         for (int i = 0; i < length; i++) {
                rot[i] = (int) phrase[i] + 13;
-                if(rot13[i] > 122) rot13[i] - 25; 
+               if(rot[i] > 122) { rot[i] = rot[i] - 26; }
                cout << (char) rot[i];
         }
-        cout << endl;
+        cout << endl << endl << endl;
         for (int i = 0; i < length; i++) {
                cout << phrase[i];
                cout << "  ";
