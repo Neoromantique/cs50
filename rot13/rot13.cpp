@@ -1,12 +1,18 @@
 #include <iostream>
 #include <string>
 
+#define LETTERS 26
+#define LASTCHARACTER 122
+
+
 using namespace std;
 
 int main() {
 
         string phrase = "";
+        
         cout << "Enter phrase to encrypt or decrypt: ";
+        
         getline(cin, phrase);
         int length;
         for(length = 0;; length++) if(!phrase[length]) break;
@@ -16,7 +22,7 @@ int main() {
 
         for (int i = 0; i < length; i++) {
                rot[i] = (int) phrase[i] + 13;
-               if(rot[i] > 122) { rot[i] = rot[i] - 26; }
+               if(rot[i] > LASTCHARACTER) { rot[i] = rot[i] - LETTERS; }
                cout << (char) rot[i];
         }
  
