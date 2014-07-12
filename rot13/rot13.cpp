@@ -17,10 +17,12 @@ int main() {
                char c = phrase[i] + 13;
                if(isupper(c)) {
                         if(c > LASTCHARACTER) { c = c - LETTERS; }
-               }
+                        cout << " upper ";
+}
                else if(islower(c)) {
                         if(c >= LASTCHARACTER) { c = c - LETTERS; }
-               }
+                        cout << " lower ";
+}
                cout << c;
         }
         cout << endl;
