@@ -16,23 +16,24 @@ int main() {
         getline(cin, phrase);
         int length;
         for(length = 0;; length++) if(!phrase[length]) break;
-        int rot[length];
+       // int rot[length];
         
         cout << "Encrypted/Decrypted Phrase: ";
 
         for (int i = 0; i < length; i++) {
-               rot[i] = (int) phrase[i] + 13;
-               if(rot[i] > LASTCHARACTER) { rot[i] = rot[i] - LETTERS; }
-               cout << (char) rot[i];
+               char c = phrase[i] + 13;
+               
+               if(isupper(c)) {
+                        //if(rot[i] > LASTCHARACTER - 33) { rot[i] = rot[i] - LETTERS; }
+                        if(c > LASTCHARACTER) { c = c - LETTERS; }
+
+               }
+               else if(islower(c)) {
+                        if(c >= LASTCHARACTER) { c = c - LETTERS; }
+               }
+               cout << c;
         }
  
-        cout << endl << endl << endl;
-        
-        for (int i = 0; i < length; i++) {
-               cout << phrase[i];
-               cout << "  ";
-               cout << (int) phrase[i] << endl;
-        }
-
-
+        cout << endl;
 }
+
