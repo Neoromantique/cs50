@@ -14,8 +14,8 @@ int main() {
         cout << "Enter phrase to encrypt or decrypt: ";
         
         getline(cin, phrase);
-        int length;
-        for(length = 0;; length++) if(!phrase[length]) break;
+        size_t length = phrase.size();
+       //for(length = 0;; length++) if(!phrase[length]) break;
        // int rot[length];
         
         cout << "Encrypted/Decrypted Phrase: ";
