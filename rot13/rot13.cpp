@@ -14,14 +14,14 @@ int main() {
         size_t length = phrase.size();
         cout << "Encrypted/Decrypted Phrase: ";
         for (int i = 0; i < length; i++) {
-               char c = phrase[i] + 13;
+               char c = phrase[i];
                if(isupper(c)) {
-                        if(c > LASTCHARACTER) { c = c - LETTERS; }
-                        cout << " upper ";
+                        if(c + 13  > LASTCHARACTER - 33) { c = c + 13 - LETTERS; }
+//                        cout << " upper ";
 }
                else if(islower(c)) {
-                        if(c >= LASTCHARACTER) { c = c - LETTERS; }
-                        cout << " lower ";
+                        if(c + 13 >= LASTCHARACTER) { c = c + 13 - LETTERS; }
+//                        cout << " lower ";
 }
                cout << c;
         }
